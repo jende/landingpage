@@ -1,53 +1,93 @@
-<style>
-    body {
-        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centrerar innehållet vågrätt */
-        min-height: 100vh;
-    }
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jendes App Hub</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    .grid-container {
-        display: grid;
-        /* Skapar ett rutnät där varje kolumn är max 200px bred */
-        grid-template-columns: repeat(auto-fit, 200px); 
-        gap: 20px;
-        width: 100%;
-        max-width: 1000px;
-        justify-content: center; /* Centrerar själva rutnätet */
-    }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
 
-    .app-card {
-        background: white;
-        border-radius: 20px;
-        padding: 30px 20px;
-        text-align: center;
-        text-decoration: none;
-        color: #333;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: transform 0.2s ease;
+        .grid-container {
+            display: grid;
+            /* Detta skapar rutor som är 200px breda */
+            grid-template-columns: repeat(auto-fit, 200px);
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            
+            /* Här tvingar vi fram kvadrat-formen */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px; 
+            width: 200px;
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px);
+            background: white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .app-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .app-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Min App Hub</h1>
+
+    <div class="grid-container">
         
-        /* Detta gör att de inte sträcker ut sig på höjden */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 180px; /* Här bestämmer du höjden på "kvadraten" */
-    }
+        <a href="#" class="app-card">
+            <div class="app-icon">✈️</div>
+            <div class="app-title">Rese-Lista</div>
+        </a>
 
-    .app-card:hover {
-        transform: translateY(-5px);
-    }
+        <a href="#" class="app-card">
+            <div class="app-icon">☀️</div>
+            <div class="app-title">Väder-App</div>
+        </a>
 
-    .app-icon {
-        font-size: 50px;
-        margin-bottom: 15px;
-    }
+        <a href="#" class="app-card">
+            <div class="app-icon">🍳</div>
+            <div class="app-title">Receptbok</div>
+        </a>
 
-    .app-title {
-        font-weight: bold;
-        font-size: 18px;
-    }
-</style>
+    </div>
+
+</body>
+</html>
