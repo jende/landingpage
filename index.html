@@ -19,11 +19,11 @@
         h1 {
             color: #333;
             margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .grid-container {
             display: grid;
-            /* Detta skapar rutor som är 200px breda */
             grid-template-columns: repeat(auto-fit, 200px);
             gap: 25px;
             width: 100%;
@@ -40,7 +40,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
             
-            /* Här tvingar vi fram kvadrat-formen */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,23 +67,18 @@
 </head>
 <body>
 
-    <h1>Min App Hub</h1>
+    <h1>Mina Projekt</h1>
 
     <div class="grid-container">
         
-        <a href="#" class="app-card">
-            <div class="app-icon">✈️</div>
-            <div class="app-title">Rese-Lista</div>
+        <a href="https://resebudget.vercel.app/" class="app-card">
+            <div class="app-icon">💵</div>
+            <div class="app-title">Resebudget</div>
         </a>
 
-        <a href="#" class="app-card">
-            <div class="app-icon">☀️</div>
-            <div class="app-title">Väder-App</div>
-        </a>
-
-        <a href="#" class="app-card">
-            <div class="app-icon">🍳</div>
-            <div class="app-title">Receptbok</div>
+        <a href="https://matfrid.vercel.app/" class="app-card">
+            <div class="app-icon">🍽️</div>
+            <div class="app-title">Matfrid</div>
         </a>
 
     </div>
