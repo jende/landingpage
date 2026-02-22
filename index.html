@@ -1,79 +1,53 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min App Hub</title>
-    <style>
-        /* Skapar den snygga lila/blå bakgrunden */
-        body {
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            margin: 0;
-            padding: 40px;
-            display: flex;
-            justify-content: center;
-        }
+<style>
+    body {
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrerar innehållet vågrätt */
+        min-height: 100vh;
+    }
 
-        /* Rutnätet som radade upp korten snyggt */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 800px;
-        }
+    .grid-container {
+        display: grid;
+        /* Skapar ett rutnät där varje kolumn är max 200px bred */
+        grid-template-columns: repeat(auto-fit, 200px); 
+        gap: 20px;
+        width: 100%;
+        max-width: 1000px;
+        justify-content: center; /* Centrerar själva rutnätet */
+    }
 
-        /* Designen för varje enskilt app-kort */
-        .app-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px 15px;
-            text-align: center;
-            text-decoration: none; /* Tar bort den fula understrykningen på länkar */
-            color: #333;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        /* Effekt när man håller musen över kortet */
-        .app-card:hover {
-            transform: translateY(-5px); /* Lyfter kortet uppåt */
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-
-        .app-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .app-title {
-            font-weight: bold;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="grid-container">
+    .app-card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease;
         
-        <a href="#" class="app-card">
-            <div class="app-icon">✈️</div>
-            <div class="app-title">Rese-Lista</div>
-        </a>
+        /* Detta gör att de inte sträcker ut sig på höjden */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 180px; /* Här bestämmer du höjden på "kvadraten" */
+    }
 
-        <a href="https://smhi.se" class="app-card" target="_blank">
-            <div class="app-icon">☀️</div>
-            <div class="app-title">Väder-App</div>
-        </a>
+    .app-card:hover {
+        transform: translateY(-5px);
+    }
 
-        <a href="#" class="app-card">
-            <div class="app-icon">🍳</div>
-            <div class="app-title">Receptbok</div>
-        </a>
+    .app-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
 
-    </div>
-
-</body>
-</html>
+    .app-title {
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>
